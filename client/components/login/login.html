@@ -1,0 +1,14 @@
+<div id="login-container" ng-controller="loginController">
+    <p>Login to Employee Records</p>
+
+    <div class="input-group" style="width:25%; display:flex">
+        <label for="employer-input" style="margin-right:5px">Employer:</label>
+        <input id="employer-input" ng-model="employer" type="text" class="form-control" placeholder="Enter username">
+    </div>
+    <div class="input-group" style="width:25%; display:flex">
+        <label for="password-input" style="margin-right:5px">Password:</label>
+        <input id="password-input" ng-model="password" type="password" class="form-control" placeholder="Enter password">
+    </div>
+
+    <button ng-click="verifyLogin()" type="button" class="btn btn-default">Login</button>
+</div>

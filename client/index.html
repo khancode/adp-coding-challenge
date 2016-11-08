@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="employeeRecords">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Records</title>
+    <!-- Angular -->
+    <script type="text/javascript" src="libs/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="libs/bower_components/jquery/dist/jquery.js"></script>
+    <!-- Angular Route -->
+    <script type="text/javascript" src="libs/bower_components/angular-route/angular-route.js"></script>
+    <!-- Angular UI Grid-->
+    <script type="text/javascript" src="libs/bower_components/angular-ui-grid/ui-grid.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/bower_components/angular-ui-grid/ui-grid.css" />
+    <!-- Bootstrap-->
+    <script type="text/javascript" src="libs/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libs/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <!-- App -->
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="shared/services/userInfoService.js"></script>
+    <script type="text/javascript" src="components/login/loginController.js"></script>
+    <script type="text/javascript" src="components/records/recordsController.js"></script>
+    <script type="text/javascript" src="routes.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+    <div id="ng-view-container" ng-view></div>
+
+</body>
+</html>
