@@ -1,0 +1,12 @@
+#login-container {
+    margin: 0 auto;
+    width: 35%;
+}
+
+.login-input {
+    width: 100%;
+}
+
+#login-button {
+    margin-top: 3%;
+}
