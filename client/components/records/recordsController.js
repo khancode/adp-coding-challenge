@@ -35,12 +35,10 @@ app.controller('recordsController', ['$scope', '$http', 'userInfo', '$location',
 
             $http.put('/api/employees', data)
                 .success(function(data, status) {
-                    console.log('PUT /api/employees success! :D')
-                    console.log(data);
+
                 })
                 .error(function(data) {
-                    console.log('PUT /api/employees error! :0')
-                    console.log(data);
+                    throw data;
                 });
         });
     };
@@ -61,14 +59,10 @@ app.controller('recordsController', ['$scope', '$http', 'userInfo', '$location',
 
         $http.patch('/api/employees', deleteList)
             .success(function(data, status) {
-                console.log('PATCH /api/employees success! :D')
-                console.log('dat data:')
-                console.log(data);
+
             })
             .error(function(data) {
-                console.log('PATCH /api/employees failed! :0')
-                console.log('dat data:')
-                console.log(data);
+                throw data;
             });
     };
 
@@ -79,16 +73,10 @@ app.controller('recordsController', ['$scope', '$http', 'userInfo', '$location',
 
         $http.post('/api/employees', postBody)
             .success(function(data, status) {
-                console.log('POST /api/employees success! :D')
-                console.log('dat data:')
-                console.log(data);
-
                 $scope.gridOpts.data.push(postBody);
             })
             .error(function(data) {
-                console.log('POST /api/employees failed! :0')
-                console.log('dat data:')
-                console.log(data);
+                throw data;
             });
     };
 
@@ -108,16 +96,10 @@ app.controller('recordsController', ['$scope', '$http', 'userInfo', '$location',
 
         $http.get('/api/employees', config)
             .success(function(data, status) {
-                console.log('GET /api/employees success! :D')
-                console.log('dat data:')
-                console.log(data);
-
                 $scope.records = parseEmployeesResponse(data);
-
                 $scope.gridOpts.data = $scope.records;
             })
             .error(function(data) {
-                console.log('GET /api/employees error! :0')
                 throw data;
             });
     }
