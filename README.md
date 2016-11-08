@@ -15,11 +15,5 @@ Run commands to install npm and bower components:
 
 # Users:
 Use either employer/password credentials to login: 
-{
-    "employer": "amazon",
-    "password": "password"
-},
-{
-    "employer": "google",
-    "password": "password"
-}
+* { "employer": "amazon", "password": "password" }
+* { "employer": "google", "password": "password" }
