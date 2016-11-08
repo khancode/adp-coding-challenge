@@ -23,27 +23,11 @@ app.controller('recordsController', ['$scope', '$http', 'userInfo', '$location',
         //set gridApi on scope
         $scope.gridApi = gridApi;
         gridApi.edit.on.afterCellEdit($scope,function(rowEntity, colDef, newValue, oldValue){
-            // $scope.msg.lastCellEdited = 'edited row userId:' + rowEntity.userId + ', Column:' + colDef.name + ', newValue:' + newValue + ', oldValue:' + oldValue ;
-            // $scope.$apply();
-
             var data = {};
             if (colDef.name === 'userId') {
                 data.oldUserId = oldValue;
                 data.userId = newValue;
             }
-            // else if (colDef.name === 'firstName') {
-            //     console.log('rowEntity.lastName: ', rowEntity.lastName);
-            //     data.name = {
-            //         first: newValue,
-            //         last: rowEntity.lastName
-            //     };
-            // }
-            // else if (colDef.name === 'lastName') {
-            //     data.name = {
-            //         first: rowEntity.firstName,
-            //         last: newValue
-            //     }
-            // }
             else {
                 data.userId = rowEntity.userId;
                 data[colDef.name] = newValue;
@@ -155,14 +139,5 @@ app.controller('recordsController', ['$scope', '$http', 'userInfo', '$location',
 
         return dataList;
     }
-
-    // $scope.goToRecords = function() {
-        // if ($scope.playerName.length == 0) {
-        //     return;
-        // }
-
-        // playerInfo.name = $scope.playerName;
-        // $location.path('/records');
-    // };
 
 }]);
