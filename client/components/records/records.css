@@ -1,0 +1,16 @@
+#records-container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#records-employer-title {
+    text-align: center;
+}
+
+#table-operations-container {
+    margin-bottom: 1.5%;
+}
+
+.new-employee-input {
+    width: 100%;
+}

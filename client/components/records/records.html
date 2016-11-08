@@ -1,9 +1,12 @@
 <div id="records-container" ng-controller="recordsController">
-    <h1>{{employer}} employees</h1>
+    <h1 id="records-employer-title">{{employer}} employees</h1>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal">Add</button>
-    <button ng-click="deleteSelected()" type="button" class="btn btn-default">Delete Selected</button>
-    <span class="bg-info">Double click a column to edit</span>
+    <div id="table-operations-container">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal">Add</button>
+        <button ng-click="deleteSelected()" type="button" class="btn btn-default">Delete Selected</button>
+        <span class="bg-info">Double click a column to edit</span>
+    </div>
+
     <div ui-grid="gridOpts" ui-grid-edit ui-grid-selection class="grid"></div>
 
     <div id="addEmployeeModal" class="modal fade" role="dialog">
@@ -15,20 +18,20 @@
                 </div>
                 <div class="modal-body">
                     <p>Fill out employee information.</p>
-                    <div class="input-group" style="display:flex">
-                        <label for="add-employee-userid-input" style="margin-right:5px">User Id:</label>
+                    <div class="input-group new-employee-input">
+                        <label for="add-employee-userid-input">User Id:</label>
                         <input id="add-employee-userid-input" ng-model="newEmployee.userId" type="text" class="form-control" placeholder="Enter user id">
                     </div>
-                    <div class="input-group" style="display:flex">
-                        <label for="add-employee-firstname-input" style="margin-right:5px">First Name:</label>
+                    <div class="input-group new-employee-input">
+                        <label for="add-employee-firstname-input">First Name:</label>
                         <input id="add-employee-firstname-input" ng-model="newEmployee.firstName" type="text" class="form-control" placeholder="Enter first name">
                     </div>
-                    <div class="input-group" style="display:flex">
-                        <label for="add-employee-lastname-input" style="margin-right:5px">Last Name:</label>
+                    <div class="input-group new-employee-input">
+                        <label for="add-employee-lastname-input">Last Name:</label>
                         <input id="add-employee-lastname-input" ng-model="newEmployee.lastName" type="text" class="form-control" placeholder="Enter last name">
                     </div>
-                    <div class="input-group" style="display:flex">
-                        <label for="add-employee-phone-input" style="margin-right:5px">Phone:</label>
+                    <div class="input-group new-employee-input">
+                        <label for="add-employee-phone-input">Phone:</label>
                         <input id="add-employee-phone-input" ng-model="newEmployee.phone" type="text" class="form-control" placeholder="Enter phone">
                     </div>
                 </div>
