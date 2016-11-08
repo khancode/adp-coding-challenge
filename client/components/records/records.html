@@ -1,13 +1,18 @@
 <div id="records-container" ng-controller="recordsController">
-    <h1 id="records-employer-title">{{employer}} employees</h1>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{employer}} employees</h3>
+        </div>
+        <div class="panel-body">
+            <div id="table-operations-container">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal">Add</button>
+                <button ng-click="deleteSelected()" type="button" class="btn btn-default">Delete Selected</button>
+                <span class="bg-info">Double click a cell to edit</span>
+            </div>
 
-    <div id="table-operations-container">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal">Add</button>
-        <button ng-click="deleteSelected()" type="button" class="btn btn-default">Delete Selected</button>
-        <span class="bg-info">Double click a cell to edit</span>
+            <div ui-grid="gridOpts" ui-grid-edit ui-grid-selection class="grid"></div>
+        </div>
     </div>
-
-    <div ui-grid="gridOpts" ui-grid-edit ui-grid-selection class="grid"></div>
 
     <div id="addEmployeeModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -40,7 +45,6 @@
                     <button ng-click="addEmployee()" type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
                 </div>
             </div>
-
         </div>
     </div>
 
